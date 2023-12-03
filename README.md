@@ -12,16 +12,17 @@ use qlnv
 CREATE TABLE employee(
 	id int PRIMARY key AUTO_INCREMENT,
     id_employee int UNIQUE,
-    name_employe varchar(50),
+    name_employee varchar(50),
     group_employee varchar(20),
     start_date varchar(20),
     training_date varchar(20),
     trainer varchar(50),
-    straining_stage varchar(500),
+    training_stage varchar(500),
     comments varchar(500),
     notes varchar(500)
 )
 
 Code: Sử dụng framework Flask và các thư viện con để viết 
+Chạy bấm F5 file app.py
 
 

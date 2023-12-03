@@ -6,7 +6,7 @@ import json
 
 
 
-app = Flask(__name__,template_folder="templates")
+app = Flask(__name__,template_folder="templates",static_folder="static")
 app.config["SECRET_KEY"] = "lechiduy2002"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root@localhost/qlnv'
 db = SQLAlchemy(app)
@@ -76,7 +76,7 @@ def create():
         return redirect(url_for("home"))
     return render_template("create.html")
 
-@app.route("/delete", methods=["POST"])
+@app.route("/delete", methods=["POST","GET"])
 def delete():
     employee = json.loads(request.data)
     employee_id = employee["employee_id"]

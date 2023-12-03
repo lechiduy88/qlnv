@@ -93,7 +93,7 @@
                     <th width="100">{{item.notes}}</th>
                     <td>
                       <div style="display: flex; flex-direction: row;">
-                      <button style="margin-right: 10px;" class="btn btn-primary btn-sm trash" type="button" title="Xóa" onClick="delete_employee({{item.id}})"><i
+                      <button style="margin-right: 10px;" class="btn btn-primary btn-sm trash" type="submit" title="Xóa" onClick="delete_employee({{item.id}})"><i
                       class="fas fa-trash-alt"></i>
                       </button>
                     <a href="{{ url_for('edit_by_id', id=item.id) }}"><button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" href
@@ -113,10 +113,18 @@
 
 
   <!-- Essential javascripts for application to work-->
-  <script type="text/javascript" src="{{url_for('static', filename = 'main.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename = 'main.js')}}">
+  </script>
   <script>
+  //   const delete_employee = (id) =>{
+  //   fetch("/delete", {
+  //       method: "POST",
+  //       body: JSON.stringify({id: id}),
 
-
+  //   }).then((response) => {
+  //       window.location.href = "/";
+  //   })
+  // }
     //Thời Gian
     function time() {
       var today = new Date();
